@@ -1,13 +1,290 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Source Sans Pro", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 1.6rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root,
+body,
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  transition: 0.5s;
+  font-size: 1.6rem;
+}
+
+.w-55 {
+  width: 55%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+@media (max-width: 767px) {
+  .w-55 {
+    width: 100%;
+  }
+
+  .w-45 {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 5.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 4.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3.9rem;
+  }
+}
+
+@media (max-width: 470px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 4.7rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  h2 {
+    font-size: 4.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h2 {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 470px) {
+  h2 {
+    font-size: 2.8rem;
+  }
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  h3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 470px) {
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+h4 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  h4 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h4 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 470px) {
+  h4 {
+    font-size: 1.6rem;
+  }
+}
+
+h5 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  h5 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h5 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h5 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 470px) {
+  h5 {
+    font-size: 1.5rem;
+  }
+}
+
+h6 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  h6 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h6 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 470px) {
+  h6 {
+    font-size: 1.1rem;
+  }
+}
+
+p {
+  font-size: 1.6px;
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 1.2rem;
+  }
 }
