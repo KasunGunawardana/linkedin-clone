@@ -1,14 +1,3 @@
-body {
-  margin: 0;
-  font-family: "Source Sans Pro", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-size: 1.6rem;
-}
-
 :root,
 body,
 html {
@@ -89,8 +78,19 @@ video {
   border: 0;
   background: transparent;
   outline: none;
-  transition: 0.5s;
   font-size: 1.6rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  background-color: #f3f2ef;
 }
 
 .w-55 {
