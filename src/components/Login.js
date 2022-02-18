@@ -81,6 +81,7 @@ const JoinBtn = styled.a`
 	margin-right:15px;
 	padding: 8px 10px;
 	font-weight: 500;
+	transition: 0.5s;
 	&:hover {
 		background-color: rgba(0,0,0,0.08);
     	color: rgba(0,0,0,0.9);
@@ -96,6 +97,7 @@ const SignBtn = styled.a`
 	color: #0073b1;
 	cursor: pointer;
 	font-weight: 500;
+	transition: 0.5s;
 	&:hover {
 		background-color: #0073b1;
 		color: #fff;
@@ -154,6 +156,7 @@ display: block;
 		color: rgba(0, 0, 0, 0.8);
 		border-radius: 25px;
 		border: 1px solid rgba(0, 0, 0, 0.2);
+		transition: 0.5s;
 		img {
 			width: 25px;
 			margin-right: 10px;

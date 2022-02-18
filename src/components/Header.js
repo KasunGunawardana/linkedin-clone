@@ -6,6 +6,7 @@ import { ReactComponent as MessagingIcon } from '../assets/images/nav-messaging.
 import { ReactComponent as NetworkIcon } from '../assets/images/nav-network.svg'
 import { ReactComponent as NotificationsIcon } from '../assets/images/nav-notifications.svg'
 import { ReactComponent as ArrowDown } from '../assets/images/arrow-down.svg'
+import { ReactComponent as WorkIcon } from '../assets/images/nav-work.svg'
 
 
 const Header = () => {
@@ -85,7 +86,15 @@ const Header = () => {
 							</SignOut>
 						</User>
 						<Work>
-
+							<a href="">
+								<span>
+									<WorkIcon />
+									<span>
+										Work
+										<ArrowDown />
+									</span>
+								</span>
+							</a>
 						</Work>
 					</NavList>
 				</Nav>
@@ -97,7 +106,7 @@ const Header = () => {
 
 const ContainerFluid = styled.div`
 	background-color: #fff;
-	border-bottom: 1px solid rgba(0,0,0, 0.05);
+	border-bottom: 1px solid rgba(0,0,0,0.08);
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -261,32 +270,48 @@ const NavItem = styled.li`
 `
 
 const User = styled(NavItem)`
-position: relative;
-a {
-	& > span {
-		& > img {
-			border-radius: 50%;
-			width: 24px;
-		}
-		span {
-			display: flex;
-			align-items: center;
-			svg {
-				transform:scale(0.8);
-				height: 12px;
+	position: relative;
+	a {
+		& > span {
+			& > img {
+				border-radius: 50%;
+				width: 24px;
+			}
+			span {
+				display: flex;
+				align-items: center;
+				svg {
+					transform:scale(0.8);
+					height: 12px;
+				}
 			}
 		}
 	}
-}
-&:hover {
-		${SignOut} {
-			display: block;
-		}
+	&:hover {
+			${SignOut} {
+				display: block;
+			}
 	}
 `
 
 const Work = styled(NavItem)`
-
+	position: relative;
+	border-left: 1px solid rgba(0,0,0,0.08);
+	a {
+		& > span {
+			& > img {
+				
+			}
+			span {
+				display: flex;
+				align-items: center;
+				svg {
+					transform:scale(0.8);
+					height: 12px;
+				}
+			}
+		}
+	}
 `
 
 export default Header
