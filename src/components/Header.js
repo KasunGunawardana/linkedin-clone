@@ -166,12 +166,13 @@ const Nav = styled.div`
 	margin-right: auto;
 	display: block;
 	position: relative;
-	/* @media (max-width: 900px) {
+	@media (max-width: 900px) {
 		position: fixed;
 		bottom: 0;
 		left: 0;
 		right: 0;
-	} */
+		background: #fff;
+	}
 `
 
 const NavList = styled.ul`

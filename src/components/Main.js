@@ -297,9 +297,10 @@ li {
 const SocialActions = styled.div`
 margin: 0.5rem 0 -10px;
 div {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	display: grid;
+    grid-auto-flow: column;
+    justify-content: initial;
+	column-gap: 0.4rem;
 	button {
 		cursor: pointer;
 		border: none;
@@ -307,9 +308,10 @@ div {
 		background-color: transparent;
 		display: inline-flex;
 		align-items: center;
-		justify-content: stretch;
+		justify-content: center;
 		padding: 10px 10px;
 		flex: 0 1 auto;
+		transition: 0.5s;
 		span {
 			font-size: 1.35rem;
 			font-weight: 600;
