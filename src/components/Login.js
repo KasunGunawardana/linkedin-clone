@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+import { signInAPI } from '../actions'
+import { Redirect } from 'react-router-dom'
 
-const Login = () => {
-	const handleSubmit = (e) => {
-		e.preventDefault();
-
-	}
+const Login = (props) => {
   return (
 	<Container>
+		{ props.user && 
+		<Redirect to="/home" />
+		}
 		<Nav>
 			<a href="/">
 				<img src="/images/logo.svg" alt="Linkedin Logo" />
@@ -22,11 +24,11 @@ const Login = () => {
 				<div className="w-55">
 					<MainHeading>Welcome to your professional community</MainHeading>
 					<Form>
-						<GoogleBtn>
-							<a href="">
+						<GoogleBtn onClick={() => props.signIn()}>
+							<div>
 								<img src="./images/google-icon.svg" alt="Google Icon" />
 								<span>Sign in with Google</span>
-							</a>
+							</div>
 						</GoogleBtn>
 					</Form>
 				</div>
@@ -41,7 +43,7 @@ const Login = () => {
 
 const Container = styled.div`
 	padding: 0 15px;
-	max-width: 1128px; 
+	max-width: 1128px;
 	margin: 0 auto;
 `
 
@@ -137,16 +139,17 @@ const MainHeading = styled.h1`
 `
 
 const Form = styled.div`
-display: flex;
-align-items: center;
-@media (max-width: 767px) {
-	
-}
+	display: flex;
+	align-items: center;
+	@media (max-width: 767px) {
+		
+	}
 `
 
 const GoogleBtn = styled.div`
-display: block;
-	a {
+	display: block;
+	cursor: pointer;
+	div {
 		display: flex;
 		width: 100%;
 		align-items: center;
@@ -171,4 +174,14 @@ display: block;
 	}
 `
 
-export default Login;
+const mapStateToProps = (state) => {
+	return {
+		user: state.userState.user
+	}
+}
+
+const mapDispatchToProps = (dispatch) => ({
+	signIn: () => dispatch(signInAPI()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
